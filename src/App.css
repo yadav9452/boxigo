@@ -53,6 +53,8 @@ body {
   list-style-type: none;
 }
 
+
+
 .mymoves {
   margin-left: 350px;
   margin-top: 38px;
@@ -172,6 +174,8 @@ body {
 .second_my_moves_box ul li button {
   border: none;
   padding: 10px 25px;
+  cursor: pointer;
+
 }
 
 .second_my_moves_box ul li button.viewbutton {
@@ -180,6 +184,8 @@ body {
   color: #ee553b;
   font-weight: 500;
   border-radius: 2px;
+  cursor: pointer;
+
 }
 
 .quotebutton {
@@ -187,6 +193,8 @@ body {
   background-color: #ee553b;
   color: white;
   border-radius: 2px;
+  cursor: pointer;
+
 }
 
 .disclaimer {
@@ -235,6 +243,8 @@ hr {
   background-color: #000000D9;
   color: white;
   border-radius: 2px;
+  cursor: pointer;
+  
 }
 
 
@@ -304,4 +314,12 @@ hr {
   padding: 15px;
   border-top: 1px solid #ccc;
 }
+
+
+
+
+
+/* Responsiveness */
+
+
 
