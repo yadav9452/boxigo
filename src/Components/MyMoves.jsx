@@ -14,7 +14,7 @@ function MyMoves() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch("http://test.api.boxigo.in/sample-data/");
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/sample-data/`);
       const result = await response.json();
       setData(result.Customer_Estimate_Flow);
       setLoading(false);
