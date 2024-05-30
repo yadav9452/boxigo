@@ -14,7 +14,7 @@ function MyMoves() {
 
   const fetchData = async () => {
     try {
-      const response = await fetch('/api/proxy');
+      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/sample-data/`);
       const result = await response.json();
       console.log(result)
       setData(result.Customer_Estimate_Flow);
