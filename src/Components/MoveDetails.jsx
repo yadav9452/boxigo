@@ -1,4 +1,5 @@
 import React from 'react';
+import DropMenu from './DropMenu';
 
 function MoveDetails({ move }) {
   return (
@@ -66,6 +67,8 @@ function MoveDetails({ move }) {
           <button>Edit Inventory</button>
         </div>
       </div>
+
+      <DropMenu/>
     </div>
   );
 }

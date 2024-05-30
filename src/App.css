@@ -256,3 +256,52 @@ hr {
 }
 
 
+/* Accordion.css */
+
+/* src/Accordion.css */
+
+
+.accdiv{
+ width: 90%;
+}
+
+.accordion {
+  /* border: 1px solid #ccc; */
+  /* border-radius: 5px; */
+  margin-bottom: 5px;
+}
+
+#accordion-title {
+  color: #ee553b;
+  font-weight: 800;
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-size: 15px;
+  cursor: pointer;
+  user-select: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icon {
+  transition: transform 0.3s ease;
+}
+
+.icon.rotate {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  padding: 0 15px;
+}
+
+.accordion-content.open {
+  max-height: 500px; /* Adjust according to your content */
+  padding: 15px;
+  border-top: 1px solid #ccc;
+}
+
