@@ -14,9 +14,11 @@ function MyMoves() {
 
   const fetchData = async () => {
     try {
+      let str_url = `${process.env.REACT_APP_BACKEND_URL}/sample-data/`
+      console.log(str_url)
       const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/sample-data/`);
       const result = await response.json();
-      console.log(result)
+      // console.log(result)
       setData(result.Customer_Estimate_Flow);
       setLoading(false);
     } catch (error) {
