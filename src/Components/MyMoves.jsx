@@ -7,16 +7,15 @@ function MyMoves() {
   const [error, setError] = useState(null);
   const [expandedId, setExpandedId] = useState(null);
 
-
   useEffect(() => {
     fetchData();
   }, []);
 
   const fetchData = async () => {
     try {
-      let str_url = `${process.env.REACT_APP_BACKEND_URL}/sample-data/`
-      console.log(str_url)
-      const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/sample-data/`);
+      let str_url = `/api/proxy`;
+      console.log(str_url);
+      const response = await fetch(`${str_url}/sample-data/`);
       const result = await response.json();
       // console.log(result)
       setData(result.Customer_Estimate_Flow);
@@ -148,12 +147,17 @@ function MyMoves() {
                   isflexible
                 </li>
                 <li>
-                  <button className="viewbutton" onClick={() => toggleDetails(index)}>{expandedId === index ? 'Hide move details' : 'View move details'}</button>
+                  <button
+                    className="viewbutton"
+                    onClick={() => toggleDetails(index)}
+                  >
+                    {expandedId === index
+                      ? "Hide move details"
+                      : "View move details"}
+                  </button>
                   <button className="quotebutton">Quotes Awaiting</button>
                 </li>
               </ul>
-              
-              
             </div>
             <div className="disclaimer">
               <p>
@@ -168,8 +172,8 @@ function MyMoves() {
                 </svg>
               </p>
               <p>
-                <span style={{"fontWeight": "547"}}>Disclaimer</span>: Please update your move date before two days of
-                shifting
+                <span style={{ fontWeight: "547" }}>Disclaimer</span>: Please
+                update your move date before two days of shifting
               </p>
             </div>
             {expandedId === index && <MoveDetails move={move} />}
